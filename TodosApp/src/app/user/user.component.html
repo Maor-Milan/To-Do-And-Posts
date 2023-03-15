@@ -1,0 +1,29 @@
+<div  [style.background-color]="isLableChosen? 'salmon': 'white'" style="border:solid 3px ; height: auto; margin:10px;padding: 5px;" [style.border-color]="isRed? 'green':'red'">
+    <form #f="ngForm" > 
+       <label  (click)="IDlable(perData._id)"> ID:{{perData._id}}</label><br>
+        Name: <input  type="text" name="name" [(ngModel)]="perData.Name" ><br>
+          Email:<input type="text"name="email" [(ngModel)]="perData.Email" >
+       </form><br>
+       <br>
+
+
+       <input style="margin:5px;" type="button" value="Update" (click)="updatePerson(perData._id)" >
+        <input style="margin:5px" type="button" value="Delete" (click)="deletePerson(perData._id)"><br>
+        <div (click)="closeInfo()" style="margin-left: auto; margin-right: auto; background-color:rgb(245, 245, 200); width: 100px; border-radius: 50%; " (mouseover)="isVisible=true">
+            More Info 
+        </div><br>
+
+        <div (click)="closeInfo()"  [style.visibility]="isVisible ? 'visible' : 'hidden'" style="margin-left: auto; margin-right: auto; border-radius:10%;  background-color: rgb(175, 179, 181); width: 50%;" >
+
+       
+        <form #f1="ngForm" >
+       &nbsp; Street: &nbsp;&nbsp;&nbsp;<input  type="text" name="street" [(ngModel)]="perData.Street" ><br>
+       &nbsp; City: &nbsp;&nbsp;<input type="text"name="city" [(ngModel)]="perData.City" ><br>
+       &nbsp; Zip Code: &nbsp;<input  type="text" name="zip" [(ngModel)]="perData.Zipcode" ><br>
+       </form><br>
+ 
+</div>
+
+
+
+

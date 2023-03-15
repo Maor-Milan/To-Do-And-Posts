@@ -1,0 +1,15 @@
+<div style="position:fixed">
+
+
+<h3 style="text-align:center;">New Post-{{userName}}</h3> 
+<div style="border:solid black 2px;text-align: center;height: 400px;">
+    <div style="padding: 25%;">
+    Title: &nbsp;<input type="text" placeholder="Enter New Title" #postTitle (keyup)="(postTitle.value)" ><br>
+    Body: &nbsp;<input type="text" placeholder="Enter New Body" #postBody (keyup)="(postBody.value)" ><br>
+
+    <input  style="margin: 10px;" type="button" value="Add" (click)="add(postTitle.value,postBody.value)" >
+    <input type="button" value="Cancel" (click)="cancel()" >
+
+</div>
+</div>
+</div>

@@ -1,0 +1,46 @@
+<!-- main div who takes 50% of the page (other 50 precent will be the router outlets)  
+<div  style="width:50%; height: 100%;float:left " >
+    <input type="button" value="POC Me" (click)="poc()">
+        
+    <div  style="width:75%; text-align: center; margin-top: 10px;"> 
+         <input type="text" placeholder="Search By Name or Email" #search (keyup)="searchUsers(search.value)"> 
+         &nbsp; <input type="buttton" style="width:50px; background-color:rgb(246, 242, 9); text-align: center;" value="Add">
+         </div><br>
+
+         
+   
+            <div  style="width:75%; border:solid;  margin:10px" [style.background-color]="idLable? 'salmon': 'white'" [style.border-color]="isComp(user.Name)? 'green':'red'" *ngFor="let user of usersToShow">
+ 
+             &nbsp; <label (click)="idLable=!idLable"  > ID:{{user._id}}</label><br><br>
+ 
+ 
+         <form #f="ngForm" > 
+         &nbsp; Name: &nbsp;<input  type="text" name="name" [(ngModel)]="user.Name" ><br>
+            &nbsp; Email:&nbsp;<input type="text"name="email" [(ngModel)]="user.Email" >
+        </form><br>
+        <div  style="background-color:lightyellow; width: 70px; " (mouseover)="isVisible=!isVisible">
+             More Info 
+         </div><br>
+         <div (click)="closeInfo()"  [style.visibility]="isVisible ? 'visible' : 'hidden'" style="border-radius:10%; background-color: rgb(225, 231, 238); width: 50%;" >
+
+             <form #f1="ngForm" >
+            &nbsp; Street: &nbsp;&nbsp;&nbsp;<input  type="text" name="street" [(ngModel)]="user.Street" ><br>
+            &nbsp; City: &nbsp;&nbsp;<input type="text"name="city" [(ngModel)]="user.City" ><br>
+            &nbsp; Zip Code: &nbsp;<input  type="text" name="zip" [(ngModel)]="user.Zipcode" ><br>
+            </form>
+      
+     </div>
+   
+    <input style="margin:5px;float: right;" type="button" value="Update" (click)="updatePerson(user.Name)">
+    <input style="margin:5px" type="button" value="Delete" (click)="deletePerson(user.Name)"><br>
+
+</div>_
+
+</div>
+
+<!-- Right float div for router outlet -->
+<!-- <div style="float:right; width:50%; height: 100%;"> 
+<router-outlet>
+
+</router-outlet>
+ </div> --> -->

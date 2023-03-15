@@ -1,0 +1,13 @@
+<div style="position:fixed">
+
+<h3 style="text-align:center;">New Todo-{{userName}}</h3> 
+<div style="border:solid black 2px;text-align: center;height: 400px;">
+    <div style="padding: 25%;">
+    Title: &nbsp;<input type="text" placeholder="Enter New Todo" #task (keyup)="(task.value)"><br>
+    <input  style="margin: 10px;" type="button" value="Add" (click)="add(task.value)" >
+    <input type="button" value="Cancel" (click)="cancel()">
+
+</div>
+</div>
+
+</div>

@@ -1,0 +1,17 @@
+<span style="font-size:30px;">Posts-{{userName}} </span> 
+<input style="float:right ;"  type="button" value="Add" (click)="add()">
+
+ 
+
+
+  <div id="outerBox" style="border:solid black 2px;margin:60px;width: auto;">
+
+     <app-post [postData]="post" *ngFor="let post of posts"></app-post>
+
+     
+
+    </div>
+
+
+
+

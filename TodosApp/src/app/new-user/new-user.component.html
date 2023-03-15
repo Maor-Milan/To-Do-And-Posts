@@ -1,0 +1,16 @@
+<div style="position:fixed">
+
+
+    <h3 style="text-align:center;">Add New User</h3> 
+    <div style="border:solid black 2px;text-align: center;height: 400px;width: 600px;">
+        <div style="padding: 25%;">
+        Name: &nbsp;<input type="text" placeholder="Enter New Name" #newname (keyup)="(newname.value)" ><br>
+        Email: &nbsp;<input type="text" placeholder="Enter New Email" #newmail (keyup)="(newmail.value)" ><br>
+    
+        <input  style="margin: 10px;" type="button" value="Add" (click)="add(newname.value,newmail.value)" >
+        <input type="button" value="Cancel" (click)="cancel()" >
+    
+    </div>
+    </div>
+    </div>
+    

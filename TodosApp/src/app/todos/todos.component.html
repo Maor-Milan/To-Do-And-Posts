@@ -1,0 +1,24 @@
+<div >
+  
+  
+  
+
+  
+  <span style="font-size:30px;">Todos-{{userName}} </span> 
+    <input style="float:right ;"  type="button" value="Add" (click)="addTodo(userID)">
+  <div id="outerBox" style="border:solid black 2px;margin:60px;width:550px">
+
+    
+
+    <app-todo  [todoData]="todo" *ngFor="let todo of todos"></app-todo>
+
+
+  </div>
+
+
+
+<br><br>
+
+
+</div>
+

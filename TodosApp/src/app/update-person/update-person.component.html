@@ -1,0 +1,19 @@
+<div style="position:fixed ; border:solid blue 2px;padding: 100px;" >
+<input type="button" value="❌" (click)="exit()">
+    <h3 style="text-align: center;">Update Person: {{user.Name}}</h3><br>
+
+<form #f1="ngForm" (ngSubmit)="save()" >
+Name: &nbsp; <input type="text" name="name" [(ngModel)]="user.Name" ><br>
+Email:&nbsp;&nbsp;<input type="text" name="email" [(ngModel)]="user.Email"><br>
+Street:&nbsp;<input type="text" name="street" [(ngModel)]="user.Street"><br>
+City:&nbsp;&nbsp;<input type="text" name="city" [(ngModel)]="user.City"><br>
+Zipcode:&nbsp;<input type="text" name="zipcode" [(ngModel)]="user.Zipcode"><br>
+
+<input type="submit" value="Save">
+</form>
+
+</div>
+
+
+
+

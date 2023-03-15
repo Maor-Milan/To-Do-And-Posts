@@ -1,0 +1,16 @@
+<div  style="width:50%; height: 100%;float:left ">
+<div style="width:75%; text-align: center; margin-top: 10px;"><br>
+    <h1>Tasks Managment</h1><br>
+    <div  style="width:75%; text-align: center; margin-top: 10px;"> 
+        <input type="text" placeholder="Search By Name or Email" #search (keyup)="searchUsers(search.value)"> 
+        &nbsp; <input type="button" value="Add" (click)="add()">
+        
+        </div><br>
+    <app-user [perData]="user" *ngFor="let user of usersToShow"></app-user>
+</div>
+</div>
+
+<div style="width:50%; height: 100%;float:right; "><br>
+
+  <router-outlet></router-outlet>
+</div>
