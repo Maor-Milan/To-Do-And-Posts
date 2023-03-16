@@ -10,7 +10,7 @@ challanging experiment but fun none the less.
 The app is basic in the current stage but able to manage as simple flow of tasks and posts to a small group.  
 
 ## Technologies
-In the front end i used Angular in a SPA architecture and of course JavaScript and TypeScript.  
+In the front end i used Angular in a SPA architecture and of course JavaScript and TypeScript with Bootstrap.  
 In the back end i used for the first time NodeJS.  
 My DB was MongoDB.
 
